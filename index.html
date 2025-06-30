@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KPI Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #3b82f6; 
+      --background-color: #111827; 
+    }
+    body {
+      background-color: var(--background-color);
+      color: #e5e7eb; 
+      font-family: 'Inter', sans-serif; 
+    }
+    
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1f2937; 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #4b5563; 
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #6b7280; 
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      filter: brightness(110%);
+    }
+    .btn-secondary {
+      background-color: #4b5563; 
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+    .btn-secondary:hover {
+      background-color: #6b7280; 
+    }
+    .btn-danger {
+      background-color: #ef4444; 
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+    .btn-danger:hover {
+      background-color: #f87171; 
+    }
+    .tab-button.active {
+       border-color: var(--primary-color) !important;
+       color: var(--primary-color) !important;
+    }
+    .charts-full-width .lg\\:grid-cols-2 {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    }
+
+    @keyframes modalShowAnim {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    .animate-modalShow {
+      animation: modalShowAnim 0.3s ease-in-out forwards;
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: translateY(20px); }
+      10% { opacity: 1; transform: translateY(0); }
+      90% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(20px); }
+    }
+    .animate-fadeInOut {
+      animation: fadeInOut var(--toast-duration, 3s) ease-in-out;
+    }
+
+    .recharts-text, .recharts-legend-item-text, .recharts-tooltip-item-name, .recharts-tooltip-item-value {
+        fill: #d1d5db; 
+    }
+    .recharts-legend-item-text {
+        color: #d1d5db !important; 
+    }
+    .recharts-cartesian-axis-tick-value {
+        fill: #9ca3af; 
+    }
+  </style>
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "recharts": "https://esm.sh/recharts@^2.15.4",
+    "@google/genai": "https://esm.sh/@google/genai",
+    "@/": "./"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/area-performance-v1.1.7/assets/index-BMZCgULm.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  
+  <!-- jsPDF and AutoTable libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+  
+</body>
+</html>
